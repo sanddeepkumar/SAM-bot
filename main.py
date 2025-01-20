@@ -4,7 +4,7 @@ from cryptography.fernet import Fernet
 import requests
 
 # Replace with your actual bot token
-BOT_TOKEN = "YOUR_BOT_TOKEN"
+BOT_TOKEN = ""
 
 # Generate a key (keep this secret!)
 key = Fernet.generate_key()
