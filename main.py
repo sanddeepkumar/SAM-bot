@@ -1,6 +1,6 @@
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
+# Don't Remove Credit Tg - @skpattharia 
+# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@sandeepa.pattharia
+# Ask Doubt on telegram @skpattharia 
 
 import os
 import re
@@ -74,11 +74,11 @@ async def upload(bot: Client, m: Message):
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**Enter Batch Name or send d for grabing from text filename.**")
+    await editable.edit("**Enter Batch Name or send 1 for grabing from text filename.**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
-    if raw_text0 == 'd':
+    if raw_text0 == '1':
         b_name = file_name
     else:
         b_name = raw_text0
@@ -169,9 +169,11 @@ async def upload(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:  
+                cc = f'**[📽️] Vid_ID:** {str(count).zfill(3)}.**{𝗻𝗮𝗺𝗲𝟭}sam.mkv\n\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**\n\n<pre><code>🔖 Batch Name:>》</code></pre>**{raw_text0}**\n\n📥 Extracted By : **{MR}**'
+                cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)}.**{𝗻𝗮𝗺𝗲𝟭}deep.pdf \n\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**\n\n<pre><code>🔖 Batch Name:>》</code></pre>**{raw_text0}**\n\n📥 Extracted By : **{MR}**'
                 
-                cc = f'**[📽️] Vid_ID:** {str(count).zfill(3)}.** {𝗻𝗮𝗺𝗲𝟭}{MR}.mkv\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
-                cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
+                #cc = f'**[📽️] Vid_ID:** {str(count).zfill(3)}.** {𝗻𝗮𝗺𝗲𝟭}{MR}.mkv\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
+                #cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -197,7 +199,7 @@ async def upload(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** `{url}`"
+                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** `{url}`\n\n**sam**"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -214,7 +216,7 @@ async def upload(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**𝔻ᴏɴᴇ 𝔹ᴏ𝕤𝕤😎**")
+    await m.reply_text("** थक गया मैं तो जी 🥰**")
 
 
 bot.run()
